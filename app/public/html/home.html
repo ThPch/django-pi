@@ -1,0 +1,18 @@
+
+{% extends "Django_Project/layout.html" %}
+{% block title %}
+Home
+{% endblock %}
+{% block content %}
+
+
+<div class="message">
+<p>Coucou</p> 
+</div>
+
+<form action="/about">
+    <div class="message"> 
+        <button onclick="submit();">Go to About page
+    </div>
+</form>
+{% endblock %}
