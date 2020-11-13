@@ -1,23 +1,3 @@
-{% load static %}
-{% csrf_token %}
-{% block content %}
-<!doctype html>
-<html lang="fr">
-   <head>
-      <meta charset="utf-8">
-      <title>Projet Alex</title>
-      <link rel="stylesheet" type="text/css" href="{% static 'Django-Project/site.css' %}" />
-   </head>
-   <body>
-        <div class="BT_Connected">
-            <h1>Bluetooth Statut : <div id="bt_state" class="bt_state">{{BT_STATUT}}</div></h1>
-        </div>
-      <button type="button" class="bouton" id="submit">{{BTN_BT_STATUT}}</button>
-   </body>
-</html>
-{% endblock %}
-
-<script>
 document.getElementById("submit").addEventListener('click', async () => {
     const Bt_State = document.getElementById('bt_state').innerHTML;
     if (Bt_State) {
@@ -49,4 +29,3 @@ document.getElementById("submit").addEventListener('click', async () => {
         alert("Error : Bt_State undefined");
     }
 });
-</script> 
