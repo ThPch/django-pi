@@ -11,8 +11,10 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 """
 
 from pathlib import Path
+import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
+#\django-pi\django-pi
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 # Quick-start development settings - unsuitable for production
@@ -49,10 +51,16 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'project.urls'
 
+#\django-pi\django-pi
+BASE_DIR2 = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
+#\django-pi\django-pi\app\public\html is the HTML who contains the views
+#print(os.path.join(BASE_DIR2, 'app\public\html'))
+
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR2, 'app\public\html')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
