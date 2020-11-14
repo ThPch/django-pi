@@ -16,7 +16,7 @@
 <body>
   <nav class="white" role="navigation">
     <div class="nav-wrapper container">
-      <a id="logo-container" href="#" class="brand-logo">Logo</a>
+      <a id="logo-container" href="#" class="brand-logo">RaspberryPi Application</a>
       <ul class="right hide-on-med-and-down">
         <li><a href="#">Navbar Link</a></li>
       </ul>
@@ -32,12 +32,15 @@
     <div class="section no-pad-bot">
       <div class="container">
         <br><br>
-        <h1 class="header center teal-text text-lighten-2">Parallax Template</h1>
+        <h1 class="header center teal-text text-lighten-2">RaspberryPi Weather Project</h1>
         <div class="row center">
-          <h5 class="header col s12 light">A modern responsive front-end framework based on Material Design</h5>
+          <h5 class="header col s12 light">Etat du connecteur bluetooth :  <div id="bt_state">{{BT_STATUT}}</div></h5>
         </div>
         <div class="row center">
-          <a href="http://materializecss.com/getting-started.html" id="download-button" class="btn-large waves-effect waves-light teal lighten-1">Get Started</a>
+          <button class="btn waves-effect green accent-4" id="submit" type="submit" name="action">Connect to the server
+            <i id="iconBluetooth" class="material-icons right">bluetooth_disabled</i>
+          </button>
+          
         </div>
         <br><br>
 

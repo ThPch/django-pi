@@ -19,8 +19,6 @@ from . import views
 
 urlpatterns = [
     path('', views.index, name='index'),
-    path("bluetooth/", views.bluetooth, name="bluetooth"),
-
     # path("home/", views.home, name="home"),
     # path("led/", views.led, name="led")
 ]
